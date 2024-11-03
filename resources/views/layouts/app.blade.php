@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="{{ asset('admin_lte') }}/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('admin_lte') }}/dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="{{ asset('web/css/admin/style.css') }}">
     <style>
         .fl-wrapper {
             margin-top: 40px;
@@ -25,11 +26,11 @@
     </style>
 </head>
 
-<body class="dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed control-sidebar-slide-open text-sm" style="height: auto;">
+<body class="light-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed control-sidebar-slide-open text-sm" style="height: auto;">
     <div class="wrapper">
 
         <!-- Preloader -->
-        <div class="preloader flex-column justify-content-center align-items-center">
+        <div class="preloader flex-column justify-content-center align-items-center bg-body-tertiary">
             <img class="animation__wobble" src="{{ asset('sman2amlapura.ico') }}" alt="AdminLTELogo" height="60"
                 width="60">
         </div>
@@ -37,30 +38,25 @@
         @include('layouts.sidebar')
 
         <div class="content-wrapper">
-            <!-- Content Header (Page header) -->
             <div class="content-header">
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
                             <h1 class="m-0">{{ config('app.name') }} | @yield('title')</h1>
-                        </div><!-- /.col -->
+                        </div>
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 Sena
                             </ol>
-                        </div><!-- /.col -->
-                    </div><!-- /.row -->
-                </div><!-- /.container-fluid -->
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- /.content-header -->
 
-            <!-- Main content -->
             @yield('content')
-            <!-- /.content -->
         </div>
         @include('layouts.footer')
     </div>
-    <!-- ./wrapper -->
 
     <!-- REQUIRED SCRIPTS -->
     <!-- jQuery -->
@@ -71,20 +67,8 @@
     <script src="{{ asset('admin_lte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
     <!-- AdminLTE App -->
     <script src="{{ asset('admin_lte/dist/js/adminlte.js') }}"></script>
-
-    <!-- PAGE PLUGINS -->
-    <!-- jQuery Mapael -->
-    <script src="{{ asset('admin_lte/plugins/jquery-mousewheel/jquery.mousewheel.js') }}"></script>
-    <script src="{{ asset('admin_lte/plugins/raphael/raphael.min.js') }}"></script>
-    <script src="{{ asset('admin_lte/plugins/jquery-mapael/jquery.mapael.min.js') }}"></script>
-    <script src="{{ asset('admin_lte/plugins/jquery-mapael/maps/usa_states.min.js') }}"></script>
-    <!-- ChartJS -->
-    <script src="{{ asset('admin_lte/plugins/chart.js/Chart.min.js') }}"></script>
-
     <!-- AdminLTE for demo purposes -->
     <script src="{{ asset('admin_lte/dist/js/demo.js') }}"></script>
-    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="{{ asset('admin_lte/dist/js/pages/dashboard2.js') }}"></script>
 
     @stack('js')
 </body>

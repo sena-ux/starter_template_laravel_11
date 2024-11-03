@@ -1,6 +1,6 @@
 <nav class="main-header navbar navbar-expand navbar-dark">
   <!-- Left navbar links -->
-  <ul class="navbar-nav">
+  <ul class="navbar-nav d-lg-none">
       <li class="nav-item" id="navbarDekstop">
           <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
@@ -8,32 +8,6 @@
   
   <!-- Right navbar links -->
   <ul class="navbar-nav ml-auto hp">
-      {{-- <li class="nav-item" id="iconMobile">
-          <img src="{{ asset('sman2amlapura.ico') }}" alt="Logo Aplikasi Sarpras" class="brand-image img-circle elevation-3">
-      </li> --}}
-      <!-- Navbar Search -->
-      <li class="nav-item search">
-          <a class="nav-link" data-widget="navbar-search" href="#" role="button">
-              <i class="fas fa-search"></i>
-          </a>
-          <div class="navbar-search-block">
-              <form class="form-inline">
-                  <div class="input-group input-group-sm">
-                      <input class="form-control form-control-navbar" type="search" placeholder="Search"
-                          aria-label="Search">
-                      <div class="input-group-append">
-                          <button class="btn btn-navbar" type="submit">
-                              <i class="fas fa-search"></i>
-                          </button>
-                          <button class="btn btn-navbar" type="button" data-widget="navbar-search">
-                              <i class="fas fa-times"></i>
-                          </button>
-                      </div>
-                  </div>
-              </form>
-          </div>
-      </li>
-
       <!-- Messages Dropdown Menu -->
       <li class="nav-item dropdown message">
           <a class="nav-link" data-toggle="dropdown" href="#">
@@ -44,7 +18,7 @@
               <a href="#" class="dropdown-item">
                   <!-- Message Start -->
                   <div class="media">
-                      <img src="{{ asset('admin_lte') }}/dist/img/people.png" alt="User Avatar"
+                      <img src="{{ asset('admin_lte') }}/dist/img/avatar.png" alt="User Avatar"
                           class="img-size-50 mr-3 img-circle">
                       <div class="media-body">
                           <h3 class="dropdown-item-title">
@@ -61,7 +35,7 @@
               <a href="#" class="dropdown-item">
                   <!-- Message Start -->
                   <div class="media">
-                      <img src="{{ asset('admin_lte') }}/dist/img/people.png" alt="User Avatar"
+                      <img src="{{ asset('admin_lte') }}/dist/img/avatar.png" alt="User Avatar"
                           class="img-size-50 img-circle mr-3">
                       <div class="media-body">
                           <h3 class="dropdown-item-title">
@@ -78,7 +52,7 @@
               <a href="#" class="dropdown-item">
                   <!-- Message Start -->
                   <div class="media">
-                      <img src="{{ asset('admin_lte') }}/dist/img/people.png" alt="User Avatar"
+                      <img src="{{ asset('admin_lte') }}/dist/img/avatar.png" alt="User Avatar"
                           class="img-size-50 img-circle mr-3">
                       <div class="media-body">
                           <h3 class="dropdown-item-title">

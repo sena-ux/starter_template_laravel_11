@@ -2,20 +2,38 @@
 
 namespace App\Livewire\Auth;
 
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 use Livewire\Component;
 use Illuminate\Support\Facades\Password;
 
 class ForgotPassword extends Component
 {
-    public $email, $title = "Forgot Password";
+    public $key, $password, $title = "Forgot Password", $idUser;
 
-    public function sendResetLink()
+    public function forgotPassword()
     {
-        $this->validate(['email' => 'required|email']);
+        $user = User::where('email', $this->key)->orWhere('username', $this->key)->first();
+        if ($user) {
+            flash()->success('Data ditemukan silahkan masukkan password baru!');
+            $this->idUser = $user->id;
+        } else {
+            flash()->error('Data tidak ditemukan!');
+        }
+    }
 
-        $status = Password::sendResetLink(['email' => $this->email]);
-
-        session()->flash('status', __($status));
+    public function NewPassword()
+    {
+        $this->validate(['password' => 'required|min:6']);
+        $user = User::find($this->idUser);
+        if ($user) {
+            $user->update(['password' => Hash::make($this->password)]);
+            flash()->success('Forgot Password Successfully!');
+            $this->idUser = null;
+            return redirect()->route('login');
+        } else {
+            flash()->error('Data tidak ditemukan!');
+        }
     }
 
     public function render()

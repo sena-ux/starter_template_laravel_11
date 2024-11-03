@@ -1,4 +1,4 @@
-<aside class="main-sidebar sidebar-dark-primary elevation-4" id="navbarDekstop">
+<aside class="main-sidebar sidebar-dark-primary" id="navbarDekstop">
   <!-- Brand Logo -->
   <a href="{{ route('home') }}" class="brand-link">
       <img src="{{ asset('sman2amlapura.ico') }}" alt="Logo Aplikasi Sarpras" class="brand-image img-circle elevation-3"

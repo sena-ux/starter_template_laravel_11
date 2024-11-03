@@ -245,11 +245,3 @@ body {
     letter-spacing: -10px;
     margin-bottom: 0;
 }
-
-
-.fl-wrapper{
-    z-index: 99999;
-    position: absolute;
-    top: 0;
-    right: 0;
-}
